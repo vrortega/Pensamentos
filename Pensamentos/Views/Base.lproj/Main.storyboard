@@ -25,6 +25,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ag-2H-8kq">
                                 <rect key="frame" x="172" y="97" width="51" height="31"/>
                                 <color key="onTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeAutoRefresh:" destination="nbU-a4-cx3" eventType="valueChanged" id="b4X-bV-JvI"/>
+                                </connections>
                             </switch>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-S0-mbX">
                                 <rect key="frame" x="0.0" y="144" width="393" height="1"/>
@@ -40,8 +43,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="5" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="V7y-UZ-sfF">
-                                <rect key="frame" x="41" y="185" width="302" height="31"/>
+                                <rect key="frame" x="37" y="185" width="306" height="31"/>
                                 <color key="minimumTrackTintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeTimeInterval:" destination="nbU-a4-cx3" eventType="valueChanged" id="yg4-gj-IE8"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-cn-OaS">
                                 <rect key="frame" x="10" y="191" width="9" height="18"/>
@@ -67,7 +73,9 @@
                                     <segment title="Claro"/>
                                     <segment title="Escuro"/>
                                 </segments>
-                                <color key="tintColor" red="0.75294117650000003" green="0.37647058820000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeColorScheme:" destination="nbU-a4-cx3" eventType="valueChanged" id="RaV-RD-7Hw"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSW-KL-cMz">
                                 <rect key="frame" x="0.0" y="231" width="393" height="1"/>
@@ -81,7 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="orY-sO-Ga2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V7y-UZ-sfF" firstAttribute="leading" secondItem="eMq-cn-OaS" secondAttribute="trailing" constant="24" id="68X-yX-yn3"/>
+                            <constraint firstItem="V7y-UZ-sfF" firstAttribute="leading" secondItem="eMq-cn-OaS" secondAttribute="trailing" constant="20" id="68X-yX-yn3"/>
                             <constraint firstItem="qPG-cM-cRv" firstAttribute="centerX" secondItem="8p8-oJ-xNp" secondAttribute="centerX" id="7Am-Co-rl3"/>
                             <constraint firstItem="2iw-db-JT7" firstAttribute="leading" secondItem="V7y-UZ-sfF" secondAttribute="trailing" constant="24" id="8rV-6F-iQg"/>
                             <constraint firstItem="BSW-KL-cMz" firstAttribute="top" secondItem="V7y-UZ-sfF" secondAttribute="bottom" constant="16" id="ASQ-hw-s5T"/>
@@ -111,6 +119,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configuracoes" image="settings" id="el5-22-JjK"/>
+                    <connections>
+                        <outlet property="autoRefreshSw" destination="6Ag-2H-8kq" id="8YL-fA-1dk"/>
+                        <outlet property="colorSchemeSc" destination="3Ca-hk-s6A" id="IRG-aO-2F7"/>
+                        <outlet property="timeIntervalLb" destination="BDM-vz-nlC" id="ZdO-qC-Aad"/>
+                        <outlet property="timeIntervalSl" destination="V7y-UZ-sfF" id="dSU-8W-4BV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRt-be-bUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,8 +161,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-Bz-1cH">
-                                <rect key="frame" x="117" y="427" width="132" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgd-Bz-1cH">
+                                <rect key="frame" x="172" y="426.66666666666669" width="49.333333333333343" height="36"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
                                 <color key="textColor" red="0.75294117647058822" green="0.37647058823529411" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -177,6 +191,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pensamentos" image="quotes" id="zUz-Ou-hQ1"/>
+                    <connections>
+                        <outlet property="authorLb" destination="zgd-Bz-1cH" id="MvG-uw-PfO"/>
+                        <outlet property="imageBg" destination="nOL-q7-RdT" id="mOr-y0-j8l"/>
+                        <outlet property="imageIv" destination="q0Q-Gt-0WZ" id="VOf-Yz-Dph"/>
+                        <outlet property="quoteLb" destination="Mrp-dP-hhR" id="5z0-9S-maJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
