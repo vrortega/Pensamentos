@@ -13,6 +13,7 @@ class QuotesViewController: UIViewController {
     @IBOutlet weak var imageBg: UIImageView!
     @IBOutlet weak var quoteLb: UILabel!
     @IBOutlet weak var authorLb: UILabel!
+    @IBOutlet weak var topCt: NSLayoutConstraint!
     
     let config = Configuration.shared
     
@@ -21,7 +22,10 @@ class QuotesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        formatView()
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("Refresh"), object: nil, queue: nil) { (notificatin) in
+            
+            self.formatView()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,12 +65,17 @@ class QuotesViewController: UIViewController {
         authorLb.alpha = 0.0
         imageIv.alpha = 0.0
         imageBg.alpha = 0.0
+        topCt.constant = 50
+        view.layoutIfNeeded()
         
         UIView.animate(withDuration: 2.5){
             self.quoteLb.alpha = 1.0
             self.authorLb.alpha = 1.0
             self.imageIv.alpha = 1.0
             self.imageBg.alpha = 0.25
+            self.topCt.constant = 10
+            self.view.layoutIfNeeded()
+
         }
     }
 }

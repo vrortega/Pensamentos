@@ -197,6 +197,7 @@
                         <outlet property="imageBg" destination="nOL-q7-RdT" id="mOr-y0-j8l"/>
                         <outlet property="imageIv" destination="q0Q-Gt-0WZ" id="VOf-Yz-Dph"/>
                         <outlet property="quoteLb" destination="Mrp-dP-hhR" id="5z0-9S-maJ"/>
+                        <outlet property="topCt" destination="fKG-Vt-4vy" id="Kjg-CG-KPW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
