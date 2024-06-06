@@ -18,6 +18,7 @@
 		4E6D27042C10D920001EDE99 /* QuotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D27032C10D920001EDE99 /* QuotesManager.swift */; };
 		4E6D27072C10D955001EDE99 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6D27062C10D955001EDE99 /* Configuration.swift */; };
 		4E6D270A2C10DEAF001EDE99 /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E6D27092C10DEAF001EDE99 /* quotes.json */; };
+		4E6D270D2C1216A1001EDE99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4E6D270C2C1216A1001EDE99 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4E6D27032C10D920001EDE99 /* QuotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesManager.swift; sourceTree = "<group>"; };
 		4E6D27062C10D955001EDE99 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4E6D27092C10DEAF001EDE99 /* quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
+		4E6D270C2C1216A1001EDE99 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4E6D26FF2C10D403001EDE99 /* SettingsViewController.swift */,
+				4E6D270C2C1216A1001EDE99 /* Settings.bundle */,
 				4E6D26FB2C10D300001EDE99 /* QuotesViewController.swift */,
 			);
 			path = Controllers;
@@ -174,6 +177,7 @@
 			files = (
 				4E6D270A2C10DEAF001EDE99 /* quotes.json in Resources */,
 				4E6D26EC2C10AAF1001EDE99 /* LaunchScreen.storyboard in Resources */,
+				4E6D270D2C1216A1001EDE99 /* Settings.bundle in Resources */,
 				4E6D26E92C10AAF1001EDE99 /* Assets.xcassets in Resources */,
 				4E6D26E72C10AAED001EDE99 /* Main.storyboard in Resources */,
 			);
