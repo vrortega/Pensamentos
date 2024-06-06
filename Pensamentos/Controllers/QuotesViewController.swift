@@ -27,6 +27,10 @@ class QuotesViewController: UIViewController {
         prepareQuote()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        prepareQuote()
+    }
+    
     func prepareQuote() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 8.0, repeats: true, block: { (timer) in
