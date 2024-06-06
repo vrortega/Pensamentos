@@ -28,4 +28,10 @@ class QuotesManager {
            fatalError("Falha ao carregar ou decodificar quotes.json: \(error)")
        }
    }
+    
+    // Retorna uma quote randomica 
+    func getRandomQuote() -> Quote {
+        let index = Int(arc4random_uniform(UInt32(quotes.count)))
+        return quotes[index]
+    }
 }

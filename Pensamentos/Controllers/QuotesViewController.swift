@@ -14,11 +14,20 @@ class QuotesViewController: UIViewController {
     @IBOutlet weak var quoteLb: UILabel!
     @IBOutlet weak var authorLb: UILabel!
     
+    let quotesManger = QuotesManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        prepareQuote()
+    }
+    
+    func prepareQuote() {
+        
+    }
 
 }
